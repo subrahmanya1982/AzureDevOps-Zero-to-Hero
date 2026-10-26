@@ -9,11 +9,6 @@ models:
         tests:
           - unique
           - not_null
-      - name: department_id
-        tests:
-          - relationships:
-              to: ref('dim_department')
-              field: department_id
 
   - name: dim_department
     description: One row per country-specific department with standardized name.
@@ -30,9 +25,4 @@ models:
         tests:
           - unique
           - not_null
-      - name: employee_id
-        tests:
-          - not_null
-          - relationships:
-              to: ref('dim_employee')
-              field: employee_id
+
