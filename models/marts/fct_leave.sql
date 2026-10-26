@@ -32,5 +32,5 @@ select
 from leave_data
 
 {% if is_incremental() %}
-    where source_updated_at > (select max(source_updated_at) from {{ this }})
+    where 1=1 and source_updated_at > (select max(source_updated_at) from {{ this }})
 {% endif %}
