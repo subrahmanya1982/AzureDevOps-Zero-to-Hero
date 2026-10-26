@@ -30,7 +30,6 @@ select
     {{ days_to_hours('days_taken') }} as hours_taken,
     source_updated_at
 from leave_data
-where 1=1
 
 {% if is_incremental() %}
     where source_updated_at > (select max(source_updated_at) from {{ this }})
