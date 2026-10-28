@@ -1,3 +1,9 @@
+{{
+    config(
+        tags = ['daily']
+    )
+}}
+
 with departments as (
 
     select

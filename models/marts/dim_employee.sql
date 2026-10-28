@@ -1,3 +1,10 @@
+{{
+    config(
+        tags = ['daily']
+    )
+}}
+
+
 with employees as (
 
     select
