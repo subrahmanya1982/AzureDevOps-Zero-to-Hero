@@ -1,3 +1,8 @@
+{{
+    config(
+        tags = ['daily']
+    )
+}}
 with source as (
 
     select
