@@ -1,7 +1,8 @@
 {{
     config(
         materialized='incremental',
-        unique_key='leave_id'
+        unique_key='leave_id',
+        tags = ['daily']
     )
 }}
 
