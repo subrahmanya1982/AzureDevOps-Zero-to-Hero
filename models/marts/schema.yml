@@ -4,11 +4,18 @@ version: 2
 models:
   - name: dim_employee
     description: One row per employee with standardized department and country info.
+
     columns:
       - name: employee_id
         tests:
-          - unique
           - not_null
+
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - employee_id
+              - department_id
 
   - name: dim_department
     description: One row per country-specific department with standardized name.
